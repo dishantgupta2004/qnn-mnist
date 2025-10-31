@@ -1,0 +1,28 @@
+# Default configuration for QNN-MNIST
+
+# Random seed for reproducibility
+seed: 42
+
+# Quantum circuit parameters
+n_qubits: 8        # Number of qubits (should match PCA output or be <= input features)
+layers: 3          # Number of variational layers in the quantum circuit
+
+# Data preprocessing
+pca_k: 8           # PCA components (set to 0 to disable PCA, use raw 784 features)
+
+# Training hyperparameters
+epochs: 10
+batch_size: 64
+lr: 0.001          # Learning rate for Adam optimizer
+
+# Dataset subsampling (for fast experimentation)
+train_size: 10000  # Number of training samples (max 60000)
+val_size: 2000     # Number of validation samples
+
+# Device configuration
+device: "cpu"      # "cpu" or "cuda"
+shots: null        # null for analytic mode, or integer (e.g., 1000) for shot-based simulation
+
+# Paths
+checkpoint_dir: "data/checkpoints"
+data_dir: "data"

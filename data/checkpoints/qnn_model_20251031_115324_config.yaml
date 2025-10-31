@@ -1,0 +1,13 @@
+batch_size: 64
+checkpoint_dir: data/checkpoints
+data_dir: data
+device: cpu
+epochs: 10
+layers: 3
+lr: 0.001
+n_qubits: 8
+pca_k: 8
+seed: 42
+shots: null
+train_size: 10000
+val_size: 2000
